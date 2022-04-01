@@ -15,8 +15,8 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := courbet
-DEVICE_PATH := device/xiaomi/courbet
+PRODUCT_RELEASE_NAME := surya
+DEVICE_PATH := device/xiaomi/surya
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
@@ -24,11 +24,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/xiaomi/courbet/device.mk)
+$(call inherit-product, device/xiaomi/surya/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := courbet
-PRODUCT_NAME := twrp_courbet
-PRODUCT_BRAND := Mi
-PRODUCT_MODEL := M2101K9AG
+PRODUCT_DEVICE := surya
+PRODUCT_NAME := twrp_surya
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Poco X3
 PRODUCT_MANUFACTURER := Xiaomi

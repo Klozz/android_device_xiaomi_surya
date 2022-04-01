@@ -1,28 +1,16 @@
 #!/system/bin/sh
-# This script is needed to automatically set device props.
+# set a couple of props, depending on device
 
-load_courbet()
+load_surya()
 {
-    resetprop "ro.product.model" "M2101K9AG"
-    resetprop "ro.product.vendor.model" "M2101K9AG"
-    resetprop "ro.product.name" "courbet"
-    resetprop "ro.build.product" "courbet"
-    resetprop "ro.product.device" "courbet"
-    resetprop "ro.product.system.device" "courbet"
-    resetprop "ro.product.vendor.device" "courbet"
-    resetprop "ro.vendor.product.device" "courbet"
+    resetprop "ro.product.name" "surya"
+    resetprop "ro.product.model" "Poco X3 NFC (M2007J20CG)"
 }
 
-load_courbetin()
+load_karna()
 {
-    resetprop "ro.product.model" "M2101K9AI"
-    resetprop "ro.product.vendor.model" "M2101K9AI"
-    resetprop "ro.product.name" "courbetin"
-    resetprop "ro.build.product" "courbetin"
-    resetprop "ro.product.device" "courbetin"
-    resetprop "ro.product.system.device" "courbetin"
-    resetprop "ro.product.vendor.device" "courbetin"
-    resetprop "ro.vendor.product.device" "courbetin"
+    resetprop "ro.product.name" "karna"
+    resetprop "ro.product.model" "Poco X3 (M2007J20CI)"
 }
 
 variant=$(getprop ro.boot.hwc)
@@ -30,14 +18,14 @@ echo $variant
 
 case $variant in
     "GLOBAL")
-        load_courbet
+        load_surya;
         ;;
     "INDIA")
-        load_courbetin
+        load_karna;
         ;;
     *)
-        load_courbet
+        load_surya;
         ;;
 esac
 
-exit 0
+exit 0;

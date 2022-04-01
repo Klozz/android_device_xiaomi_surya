@@ -1,5 +1,5 @@
-ro.product.vendor.marketname=Mi 11 Lite 4G
-ro.product.board=courbet
+ro.product.vendor.marketname=Poco X3 NFC
+ro.product.board=surya
 ro.board.platform=sm6150
 sys.usb.controller=a600000.dwc3
 sys.usb.rndis.func.name=rndis_bam
@@ -10,4 +10,3 @@ ro.boot.dynamic_partitions=true
 ro.adb.secure=0
 fbe.metadata.wrappedkey=true
 ro.crypto.volume.filenames_mode=aes-256-cts
-

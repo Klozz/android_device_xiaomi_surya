@@ -72,4 +72,3 @@ on boot
     start vendor.qti.vibrator
     start vibratorfeature-hal-1-0
     setprop sys.usb.config adb
-
