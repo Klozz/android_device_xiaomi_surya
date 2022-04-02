@@ -4,6 +4,12 @@
 
 # mount point  fstype  device                             device2                flags
 
+/system 	ext4    	/dev/block/mapper/system 			    flags=display="System"
+vendor        	/vendor         ext4    	ro,barrier=1,discard                wait,logical,first_stage_mount
+product       	/product        ext4    	ro,barrier=1,discard                wait,logical,first_stage_mount
+system_ext    	/system_ext     ext4    	ro,barrier=1,discard                wait,logical,first_stage_mount
+
+
 /metadata      ext4    /dev/block/bootdevice/by-name/metadata                    flags=display="Metadata";backup=1;wrappedkey
 /data          f2fs    /dev/block/bootdevice/by-name/userdata                    flags=fileencryption=ice,wrappedkey
 /boot          emmc    /dev/block/bootdevice/by-name/boot
